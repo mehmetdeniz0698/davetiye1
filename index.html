@@ -267,18 +267,23 @@
             outline: none;
             background-color: #f8fafc;
         }
-        .inline-radios {
-            display: flex;
-            gap: 25px;
-            padding: 5px 0;
-        }
-        .inline-radios label {
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-        }
+        .in.inline-radios {
+        display: flex;
+        flex-wrap: wrap; /* ELEMANLARIN ALT SATIRA GEÇMESİNİ SAĞLAR */
+        gap: 15px; /* MOBİLDE DAHA AZ BOŞLUK */
+        padding: 5px 0;
+    }
+
+    .inline-radios label {
+        font-weight: 400;
+        display: flex;
+        align-items: center; /* DİKEY OLARAK ORTALA */
+        gap: 10px; /* RADYO DÜĞMESİ VE METİN ARASINDAKİ BOŞLUK */
+        cursor: pointer;
+        margin-right: 15px; /* SIKILIĞI ÖNLEMEK İÇİN SAĞ MARJIN */
+        margin-bottom: 5px; /* WRAP YAPTIĞINDA ALT BOŞLUK */
+        min-width: fit-content; /* METNİN SIKIŞMASINI ÖNLE */
+    }
     </style>
 </head>
 <body>
