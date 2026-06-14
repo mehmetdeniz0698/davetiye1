@@ -13,37 +13,38 @@
     <style>
         /* DAVETİYE İLE UYUMLU PASTEL MAVİ RENK PALETİ */
     :root {
-        --bg-watercolor: #edf4fa;    /* Kristalize buz mavisi tonunda, çok açık ferah arka plan */
-        --primary-navy: #0d1f3d;     /* Buz mavisiyle kontrast oluşturan net, koyu lacivert */
-        --pastel-blue: #71a9cf;      /* Canlı ve berrak buz mavisi (Butonlar ve çizgiler için) */
-        --light-blue: #d6e5f3;       /* Kartlar ve rozetler için hafif dondurucu mavi tonu */
-        --text-gray: #414b59;        /* Okunurluk için hafif maviye çalan antrasit */
+        --bg-watercolor: #b8d3eb;    /* Dış arka plan - Belirgin açık buz mavisi */
+        --container-bg: #e1eef7;     /* SİTENİN İÇİ - Net hissedilen, gözü yormayan buz mavisi */
+        --primary-navy: #0d1f3d;     /* Koyu lacivert yazılar */
+        --pastel-blue: #4a8db7;      /* Canlı buz mavisi butonlar ve çizgiler */
+        --light-blue: #cbdff0;       /* Bilgi kartlarının içi */
+        --text-gray: #2d3845;        /* Okunabilir koyu antrasit */
         --white: #ffffff;
     }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-watercolor);
-            color: var(--text-gray);
-            line-height: 1.6;
-        }
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: var(--bg-watercolor);
+        color: var(--text-gray);
+        line-height: 1.6;
+    }
 
-        /* ANA SİTE KONTEYNERİ */
-        .main-container {
-            max-width: 480px; /* Tam mobil uyumlu modern kalıp */
-            margin: 0 auto;
-            background-color: var(--white);
-            min-height: 100vh;
-            box-shadow: 0 0 40px rgba(15, 32, 66, 0.05);
-            position: relative;
-            padding-bottom: 90px;
-        }
+    /* ANA SİTE KONTEYNERİ */
+    .main-container {
+        max-width: 480px; 
+        margin: 0 auto;
+        background-color: var(--container-bg); /* İŞTE BURASI ARTIK BEYAZ DEĞİL, BUZ MAVİSİ! */
+        min-height: 100vh;
+        box-shadow: 0 0 40px rgba(15, 32, 66, 0.08);
+        position: relative;
+        padding-bottom: 90px;
+    }
 
         /* ORİJİNAL DAVETİYE ALANI */
         .invitation-hero {
