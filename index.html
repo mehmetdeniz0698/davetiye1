@@ -11,45 +11,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
-        /* DAVETİYE İLE UYUMLU PASTEL MAVİ RENK PALETİ */
-    :root {
-        --bg-watercolor: #b8d3eb;    /* Dış arka plan - Belirgin açık buz mavisi */
-        --container-bg: #e1eef7;     /* SİTENİN İÇİ - Net hissedilen, gözü yormayan buz mavisi */
-        --primary-navy: #0d1f3d;     /* Koyu lacivert yazılar */
-        --pastel-blue: #4a8db7;      /* Canlı buz mavisi butonlar ve çizgiler */
-        --light-blue: #cbdff0;       /* Bilgi kartlarının içi */
-        --text-gray: #2d3845;        /* Okunabilir koyu antrasit */
-        --white: #ffffff;
-    }
+        /* TAM istediğin buZ MAVİSİ RENK PALETİ */
+        :root {
+            --bg-watercolor: #b8d3eb;    /* Dış arka plan - Belirgin açık buz mavisi */
+            --container-bg: #e1eef7;     /* SİTENİN İÇİ - Net hissedilen buz mavisi */
+            --primary-navy: #0d1f3d;     /* Koyu lacivert yazılar */
+            --pastel-blue: #4a8db7;      /* Canlı buz mavisi butonlar ve çizgiler */
+            --light-blue: #cbdff0;       /* Bilgi kartlarının içi */
+            --text-gray: #2d3845;        /* Okunabilir koyu antrasit */
+            --white: #ffffff;
+        }
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-        font-family: 'Montserrat', sans-serif;
-        background-color: var(--bg-watercolor);
-        color: var(--text-gray);
-        line-height: 1.6;
-    }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-watercolor);
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
 
-    /* ANA SİTE KONTEYNERİ */
-    .main-container {
-        max-width: 480px; 
-        margin: 0 auto;
-        background-color: var(--container-bg); /* İŞTE BURASI ARTIK BEYAZ DEĞİL, BUZ MAVİSİ! */
-        min-height: 100vh;
-        box-shadow: 0 0 40px rgba(15, 32, 66, 0.08);
-        position: relative;
-        padding-bottom: 90px;
-    }
+        /* ANA SİTE KONTEYNERİ */
+        .main-container {
+            max-width: 480px; 
+            margin: 0 auto;
+            background-color: var(--container-bg);
+            min-height: 100vh;
+            box-shadow: 0 0 40px rgba(15, 32, 66, 0.08);
+            position: relative;
+            padding-bottom: 90px;
+        }
 
         /* ORİJİNAL DAVETİYE ALANI */
         .invitation-hero {
             width: 100%;
-            background-color: var(--white);
+            background-color: transparent;
             text-align: center;
             padding: 10px 10px 0 10px;
         }
@@ -65,10 +65,10 @@
         .dress-code-banner {
             margin: 20px 15px;
             padding: 15px;
-            background: linear-gradient(135deg, #f0f5fa 0%, #e3edf7 100%);
+            background: linear-gradient(135deg, #cbdff0 0%, #b8d3eb 100%);
             border-radius: 10px;
             text-align: center;
-            border: 1px solid rgba(127, 169, 200, 0.2);
+            border: 1px solid rgba(74, 141, 183, 0.2);
         }
 
         .dress-code-title {
@@ -89,9 +89,9 @@
         /* STICKY SEKMELER */
         .sticky-navbar {
             display: flex;
-            background-color: var(--white);
-            border-top: 1px solid #eef2f6;
-            border-bottom: 1px solid #eef2f6;
+            background-color: var(--container-bg);
+            border-top: 1px solid rgba(74, 141, 183, 0.2);
+            border-bottom: 1px solid rgba(74, 141, 183, 0.2);
             position: sticky;
             top: 0;
             z-index: 999;
@@ -105,7 +105,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.05rem;
             font-weight: 600;
-            color: #8a99ad;
+            color: #627488;
             cursor: pointer;
             text-align: center;
             transition: all 0.3s ease;
@@ -170,8 +170,8 @@
 
         /* BİLGİ KARTLARI */
         .content-card {
-            background-color: #fbfcfd;
-            border: 1px solid #eef3f8;
+            background-color: var(--light-blue);
+            border: 1px solid rgba(74, 141, 183, 0.15);
             border-radius: 12px;
             padding: 18px;
             margin-bottom: 15px;
@@ -186,8 +186,8 @@
 
         .badge-blue {
             font-size: 0.75rem;
-            background-color: var(--light-blue);
-            color: var(--primary-navy);
+            background-color: var(--pastel-blue);
+            color: var(--white);
             padding: 4px 10px;
             border-radius: 30px;
             font-weight: 500;
@@ -197,11 +197,11 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            color: var(--pastel-blue);
+            color: var(--primary-navy);
             text-decoration: none;
             font-size: 0.85rem;
-            font-weight: 500;
-            margin-top: 5px;
+            font-weight: 600;
+            margin-top: 10px;
         }
 
         .btn-primary {
@@ -219,18 +219,18 @@
             border: none;
             width: 100%;
             cursor: pointer;
-            box-shadow: 0 4px 12px rgba(15, 32, 66, 0.15);
+            box-shadow: 0 4px 12px rgba(13, 31, 61, 0.15);
             margin-top: 15px;
         }
 
         .btn-secondary {
             background-color: var(--pastel-blue);
-            box-shadow: 0 4px 12px rgba(127, 169, 200, 0.2);
+            box-shadow: 0 4px 12px rgba(74, 141, 183, 0.2);
         }
 
         /* ULAŞIM ADIMLARI */
         .timeline-step {
-            border-left: 2px solid var(--light-blue);
+            border-left: 2px solid var(--pastel-blue);
             padding-left: 15px;
             margin-left: 10px;
             position: relative;
@@ -243,48 +243,9 @@
             top: 4px;
             width: 10px;
             height: 10px;
-            background-color: var(--pastel-blue);
+            background-color: var(--primary-navy);
             border-radius: 50%;
         }
-
-        /* LCV FORM TASARIMI */
-        .form-element {
-            margin-bottom: 15px;
-        }
-        .form-element label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--primary-navy);
-            margin-bottom: 6px;
-        }
-        .form-element input, .form-element select {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #d9e2ec;
-            border-radius: 6px;
-            font-family: inherit;
-            font-size: 0.9rem;
-            outline: none;
-            background-color: #f8fafc;
-        }
-        .in.inline-radios {
-        display: flex;
-        flex-wrap: wrap; /* ELEMANLARIN ALT SATIRA GEÇMESİNİ SAĞLAR */
-        gap: 15px; /* MOBİLDE DAHA AZ BOŞLUK */
-        padding: 5px 0;
-    }
-
-    .inline-radios label {
-        font-weight: 400;
-        display: flex;
-        align-items: center; /* DİKEY OLARAK ORTALA */
-        gap: 10px; /* RADYO DÜĞMESİ VE METİN ARASINDAKİ BOŞLUK */
-        cursor: pointer;
-        margin-right: 15px; /* SIKILIĞI ÖNLEMEK İÇİN SAĞ MARJIN */
-        margin-bottom: 5px; /* WRAP YAPTIĞINDA ALT BOŞLUK */
-        min-width: fit-content; /* METNİN SIKIŞMASINI ÖNLE */
-    }
     </style>
 </head>
 <body>
@@ -312,7 +273,7 @@
         <p style="text-align: center; font-weight: 500; color: var(--primary-navy);">Mekan: Lavantalı Konak</p>
         <p style="text-align: center; font-size: 0.85rem; margin-top: -10px;">Akarca Mevkii, Seferihisar / İzmir</p>
         
-        <a href="https://www.google.com/maps/search/?api=1&query=Lavantalı+Konak+Seferihisar+İzmir" target="_blank" class="btn-primary">
+        <a href="https://maps.google.com/?q=Lavantalı+Konak+Seferihisar" target="_blank" class="btn-primary">
             <i class="fa-solid fa-location-arrow"></i> Google Haritalar ile Yol Tarifi Al
         </a>
 
@@ -320,17 +281,12 @@
         
         <div class="timeline-step">
             <h3>Adnan Menderes Havalimanı'ndan Geliş</h3>
-            <p>Havalimanından çıktıktan sonra İZBAN banliyö hattına binerek <strong>Cumaovası Aktarma Merkezi</strong> durağında ininiz. Buradan hareket eden <strong>775 numaralı Seferihisar</strong> ESHOT belediye otobüsü ile doğrudan ilçe merkezine ulaşım sağlayabilirsiniz. Havalimanından araçla gelecek misafirler için yol yaklaşık 50 dakika sürmektedir.</p>
+            <p>Havalimanından çıktıktan sonra İZBAN banliyö hattına binerek <strong>Cumaovası Aktarma Merkezi</strong> durağında ininiz. Buradan hareket eden <strong>775 numaralı Seferihisar</strong> ESHOT belediye otobüsü ile doğrudan ilçe merkezine ulaşım sağlayabilirsiniz.</p>
         </div>
 
         <div class="timeline-step">
             <h3>Özel Araç ile Ulaşım</h3>
-            <p>İzmir-Çeşme otoyolundan ilerlerken Seferihisar tabelasını takip ederek otobandan ayrılın. Seferihisar ilçe merkezine girdiğinizde sahil yönündeki "Akarca" tabelalarını izleyerek aşağı indiğinizde yol üzerinde Lavantalı Konak yönlendirmelerini göreceksiniz.</p>
-        </div>
-
-        <div class="timeline-step">
-            <h3>Şehir İçi Toplu Taşıma</h3>
-            <p>İzmir Fahrettin Altay Aktarma Merkezi'nden her 20 dakikada bir kalkan 975 veya 985 numaralı Seferihisar otobüslerine ya da ilçe dolmuşlarına binebilirsiniz. Seferihisar merkezinden Akarca sahiline sürekli dolmuşlar çalışmaktadır.</p>
+            <p>İzmir-Çeşme otoyolundan ilerlerken Seferihisar tabelasını takip ederek otobandan ayrılın. Seferihisar ilçe merkezine girdiğinizde sahil yönündeki "Akarca" tabelalarını izleyebilirsiniz.</p>
         </div>
     </div>
 
@@ -338,29 +294,39 @@
         <h2>Konaklama Önerileri</h2>
         <p style="margin-bottom: 20px;">Düğün alanımıza yakın mesafede yer alan, sizler için seçtiğimiz konaklama alternatifleri:</p>
 
-       <div class="hotel-card">
-    <h3>Lagom Otel / Pansiyon</h3>
-    <p>Seferihisar merkezine yakın, samimi ve konforlu bir konaklama alternatifi.</p>
-    <a href="https://maps.google.com/?q=Lagom+Pansiyon+Seferihisar" target="_blank" class="btn-primary" style="padding: 6px 12px; font-size: 0.85em; margin-top: 10px; display: inline-flex; align-items: center; gap: 5px; text-decoration: none; border-radius: 6px;">
-        <i class="fa-solid fa-location-dot"></i> Haritada Göster
-    </a>
-</div>
+        <div class="content-card">
+            <div class="card-top">
+                <h3>Lagom Hotel Seferihisar</h3>
+                <span class="badge-blue">Önerilen</span>
+            </div>
+            <p>Merkeze yakın, yüksek hizmet standardına ve modern oda tasarımlarına sahip konforlu butik otel seçeneğidir.</p>
+            <a href="https://maps.google.com/?q=Lagom+Pansiyon+Seferihisar" target="_blank" class="btn-primary" style="padding: 8px 14px; font-size: 0.85rem; margin-top: 10px; display: inline-flex; width: auto;">
+                <i class="fa-solid fa-location-dot"></i> Haritada Göster
+            </a>
+        </div>
 
-<div class="hotel-card">
-    <h3>Akarca Elit Pansiyon</h3>
-    <p>Denize yakın konumuyla sakin ve huzurlu bir konaklama deneyimi sunan şirin bir işletme.</p>
-    <a href="https://maps.google.com/?q=Akarcaelitepansiyon+Seferihisar" target="_blank" class="btn-primary" style="padding: 6px 12px; font-size: 0.85em; margin-top: 10px; display: inline-flex; align-items: center; gap: 5px; text-decoration: none; border-radius: 6px;">
-        <i class="fa-solid fa-location-dot"></i> Haritada Göster
-    </a>
-</div>
+        <div class="content-card">
+            <div class="card-top">
+                <h3>Akarca Elit Pansiyon</h3>
+                <span class="badge-blue">Ekonomik</span>
+            </div>
+            <p>Sakin ve samimi bir Ege aile işletmesi olan pansiyon, temiz odaları ve denize yakınlığıyla harika bir alternatiftir.</p>
+            <a href="https://maps.google.com/?q=Akarca+Elit+Pansiyon+Seferihisar" target="_blank" class="btn-primary" style="padding: 8px 14px; font-size: 0.85rem; margin-top: 10px; display: inline-flex; width: auto;">
+                <i class="fa-solid fa-location-dot"></i> Haritada Göster
+            </a>
+        </div>
 
-<div class="hotel-card">
-    <h3>Teos Ormancı Tatil Köyü</h3>
-    <p>Doğa ile iç içe, plaj imkanı da sunan geniş ve keyifli bir tatil köyü alternatifi.</p>
-    <a href="https://maps.google.com/?q=Teos+Ormanci+Tatil+Köyü+Seferihisar" target="_blank" class="btn-primary" style="padding: 6px 12px; font-size: 0.85em; margin-top: 10px; display: inline-flex; align-items: center; gap: 5px; text-decoration: none; border-radius: 6px;">
-        <i class="fa-solid fa-location-dot"></i> Haritada Göster
-    </a>
-</div>
+        <div class="content-card">
+            <div class="card-top">
+                <h3>Teos Ormancı Tatil Köyü</h3>
+                <span class="badge-blue">Doğa & Bungalov</span>
+            </div>
+            <p>Akarca sahil şeridinde, çam ağaçlarının gölgesinde, denize sıfır bungalov opsiyonları sunan geniş bir tesistir.</p>
+            <a href="https://maps.google.com/?q=Teos+Ormancı+Tatil+Köyü+Seferihisar" target="_blank" class="btn-primary" style="padding: 8px 14px; font-size: 0.85rem; margin-top: 10px; display: inline-flex; width: auto;">
+                <i class="fa-solid fa-location-dot"></i> Haritada Göster
+            </a>
+        </div>
+    </div>
 
     <div id="tab-rehber" class="tab-panel">
         <h2>Denize Girilecek Plajlar</h2>
@@ -368,33 +334,33 @@
         <div class="content-card">
             <h3>Akarca Halk Plajı</h3>
             <p>Mavi bayraklı, akvaryum berraklığında ve canlandırıcı serinlikte bir denize sahiptir. Düğün mekanımıza yürüme mesafesindedir.</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Akarca+Halk+Plajı+Seferihisar" target="_blank" class="maps-link"><i class="fa-solid fa-map-pin"></i> Haritada Göster</a>
+            <a href="https://maps.google.com/?q=Akarca+Plaji+Seferihisar" target="_blank" class="maps-link"><i class="fa-solid fa-map-pin"></i> Haritada Göster</a>
         </div>
 
         <div class="content-card">
             <h3>Akkum Plajı</h3>
-            <p>Sığacık bölgesinin en meşhur plajıdır. Rüzgar almayan yapısı, incecik kumu ve sığ sularıyla deniz keyfi için oldukça popülerdir.</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Akkum+Plajı+Sığacık" target="_blank" class="maps-link"><i class="fa-solid fa-map-pin"></i> Haritada Göster</a>
+            <p>Sığacık bölgesinin en meşhur plajıdır. İncecik kumu ve sığ sularıyla deniz keyfi için oldukça popülerdir.</p>
+            <a href="https://maps.google.com/?q=Akkum+Plaji+Sıgacık" target="_blank" class="maps-link"><i class="fa-solid fa-map-pin"></i> Haritada Göster</a>
         </div>
 
         <div class="content-card">
             <h3>Ekmeksiz Tabiat Parkı Koyu</h3>
-            <p>Yemyeşil çam ormanlarının gölgesinde saklı kalmış, rüzgarsız, dalgasız ve cam gibi turkuaz renkli saklı bir cennettir.</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Ekmeksiz+Plajı+Seferihisar" target="_blank" class="maps-link"><i class="fa-solid fa-map-pin"></i> Haritada Göster</a>
+            <p>Yemyeşil çam ormanlarının gölgesinde saklı kalmış, rüzgarsız ve cam gibi turkuaz renkli saklı bir cennettir.</p>
+            <a href="https://maps.google.com/?q=Ekmeksiz+Plaji+Sıgacık" target="_blank" class="maps-link"><i class="fa-solid fa-map-pin"></i> Haritada Göster</a>
         </div>
 
         <h2 style="margin-top: 35px;">Gezilecek Yerler</h2>
 
         <div class="content-card">
             <h3>Sığacık Kaleiçi & Üretici Pazarı</h3>
-            <p>Tarihi surlar ardına gizlenmiş taş evlerin aralarında yürüyebilir, eğer Pazar gününe denk gelirseniz yerel kadınların el emeği Ege böreklerini ve tatlarını sunduğu meşhur pazarı gezebilirsiniz.</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Sığacık+Kaleiçi+Seferihisar" target="_blank" class="maps-link"><i class="fa-solid fa-map-pin"></i> Haritada Göster</a>
+            <p>Tarihi surlar ardına gizlenmiş taş evlerin aralarında yürüyebilir, yerel kadınların el emeği Ege lezzetlerini tadabilirsiniz.</p>
+            <a href="https://maps.google.com/?q=Sıgacık+Kalesi" target="_blank" class="maps-link"><i class="fa-solid fa-map-pin"></i> Haritada Göster</a>
         </div>
 
         <div class="content-card">
             <h3>Teos Antik Kenti</h3>
-            <p>Tarihte Sanatçılar Birliği'nin kurulduğu ilk yer olan, bin yıllık zeytin ağaçlarının ortasındaki bu büyüleyici antik kenti kesinlikle ziyaret etmelisiniz.</p>
-            <a href="https://www.google.com/maps/search/?api=1&query=Teos+Antik+Kenti" target="_blank" class="maps-link"><i class="fa-solid fa-map-pin"></i> Haritada Göster</a>
+            <p>Bin yıllık zeytin ağaçlarının ortasındaki bu büyüleyici antik kenti kesinlikle ziyaret etmelisiniz.</p>
+            <a href="https://maps.google.com/?q=Teos+Antik+Kenti" target="_blank" class="maps-link"><i class="fa-solid fa-map-pin"></i> Haritada Göster</a>
         </div>
     </div>
 
@@ -402,7 +368,9 @@
         <h2>Katılım Formu (LCV)</h2>
         <p style="text-align: center; margin-bottom: 20px;">Sizlere daha iyi bir organizasyon sunabilmemiz için lütfen katılım durumunuzu bildirmeyi unutmayınız.</p>
         
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeX2jnjb3Yv8cKCkoq8gMQizps0JnVnTKOz-JgfbonAVm_SVA/viewform?embedded=true" width="100%" height="917" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor…</iframe>
+        <div style="width: 100%; border-radius: 12px; overflow: hidden; border: 1px solid rgba(74, 141, 183, 0.2); background: #ffffff;">
+            <iframe src="https://docs.google.com/forms/d/e/FORM_KODUNUZ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Yükleniyor...</iframe>
+        </div>
 
         <h2 style="margin-top: 40px;">Düğün Anı Albümü</h2>
         <p>Düğün günümüzde kadrajınıza takılan tüm mutlu ve eğlenceli anları ortak dijital albümümüze yükleyerek anılarımızı bizimle paylaşabilirsiniz!</p>
