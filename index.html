@@ -36,7 +36,7 @@
 
         /* ANA SİTE KONTEYNERİ */
         .main-container {
-            max-width: 480px; /* Tam mobil uyumlu Begüm&Egehan stili kalıp */
+            max-width: 480px; /* Tam mobil uyumlu modern kalıp */
             margin: 0 auto;
             background-color: var(--white);
             min-height: 100vh;
@@ -45,7 +45,7 @@
             padding-bottom: 90px;
         }
 
-        /* 1. EN BAŞTAKİ ORİJİNAL DAVETİYE ALANI */
+        /* ORİJİNAL DAVETİYE ALANI */
         .invitation-hero {
             width: 100%;
             background-color: var(--white);
@@ -58,7 +58,6 @@
             height: auto;
             display: block;
             border-radius: 4px;
-            /* Davetiyeyi değiştirmeden, orijinal dikey oranında korur */
         }
 
         /* DRESS CODE BANT ALANI */
@@ -86,7 +85,7 @@
             font-weight: 400;
         }
 
-        /* SEKMELİ NAVİGASYON MENÜSÜ */
+        /* STICKY SEKMELER */
         .sticky-navbar {
             display: flex;
             background-color: var(--white);
@@ -168,14 +167,13 @@
             text-align: justify;
         }
 
-        /* ZARİF BİLGİ KARTLARI */
+        /* BİLGİ KARTLARI */
         .content-card {
             background-color: #fbfcfd;
             border: 1px solid #eef3f8;
             border-radius: 12px;
             padding: 18px;
             margin-bottom: 15px;
-            transition: all 0.2s ease;
         }
 
         .card-top {
@@ -194,7 +192,6 @@
             font-weight: 500;
         }
 
-        /* GERÇEK ÇALIŞAN MAPS BUTONLARI */
         .maps-link {
             display: inline-flex;
             align-items: center;
@@ -204,9 +201,6 @@
             font-size: 0.85rem;
             font-weight: 500;
             margin-top: 5px;
-        }
-        .maps-link:hover {
-            color: var(--primary-navy);
         }
 
         .btn-primary {
@@ -273,10 +267,6 @@
             outline: none;
             background-color: #f8fafc;
         }
-        .form-element input:focus {
-            border-color: var(--pastel-blue);
-            background-color: var(--white);
-        }
         .inline-radios {
             display: flex;
             gap: 25px;
@@ -295,9 +285,10 @@
 
 <div class="main-container">
 
-<div class="invitation-hero">
-    <img src="davetiye.png" alt="Yağmur & Deniz Evleniyor">
-</div>
+    <div class="invitation-hero">
+        <img src="ÖNCEKİ_ADIMDA_BAŞARIYLA_ÇALIŞAN_DAVETİYE_LİNKİNİZ" alt="Yağmur & Deniz Evleniyor">
+    </div>
+
     <div class="dress-code-banner">
         <div class="dress-code-title">DRESS CODE</div>
         <div class="dress-code-desc">Düğün konseptimiz için davetlilerimizin <strong>pastel renk tonlarında</strong> şık kıyafetler tercih etmesini rica ederiz. 🌸</div>
@@ -433,7 +424,7 @@
         <h2 style="margin-top: 40px;">Düğün Anı Albümü</h2>
         <p>Düğün günümüzde kadrajınıza takılan tüm mutlu ve eğlenceli anları ortak dijital albümümüze yükleyerek anılarımızı bizimle paylaşabilirsiniz!</p>
         
-        <a href="https://photos.google.com" target="_blank" class="btn-primary btn-secondary">
+        <a href="https://drive.google.com/drive/folders/1c_hLA1BRPRGRmoEq8INEjz6Qc8yIVXWK?usp=drive_link" target="_blank" class="btn-primary btn-secondary">
             <i class="fa-solid fa-camera-retro"></i> Fotoğrafları Buraya Yükle
         </a>
     </div>
@@ -442,19 +433,15 @@
 
 <script>
     function openSection(evt, sectionId) {
-        // Tüm panelleri gizle
         const tabPanels = document.querySelectorAll('.tab-panel');
         tabPanels.forEach(panel => panel.classList.remove('active'));
 
-        // Tüm butonlardan active sınıfını kaldır
         const tabButtons = document.querySelectorAll('.nav-tab-btn');
         tabButtons.forEach(btn => btn.classList.remove('active'));
 
-        // Tıklanan sekmeyi aktif et ve ilgili paneli göster
         document.getElementById(sectionId).classList.add('active');
         evt.currentTarget.classList.add('active');
 
-        // Menüye tıklandığında ekranı navbar hizasına kaydırır (Kullanıcı Deneyimi İçerik Odaklı)
         const navbar = document.querySelector('.sticky-navbar');
         navbar.scrollIntoView({ behavior: 'smooth' });
     }
